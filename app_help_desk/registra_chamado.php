@@ -8,14 +8,14 @@ $titulo = $_POST['titulo'];
 $categoria = $_POST['categoria'];
 $textarea = $_POST['textarea'];
 
-$texto = $titulo. ' | ' .$categoria. ' | ' .$textarea;
+$texto = $titulo. '#' .$categoria. '#' .$textarea.PHP_EOL;
 
-echo  $texto;
+header('location: consultar_chamado.php');
 
-// fopen ('registro.txt', 'a');
+$arquivo = fopen('registro.txt', 'a');
 
-// fwrite('registro.txt', '$texto');
+fwrite($arquivo, $texto);
 
-// fclose('registro.txt');
+fclose($arquivo);
 
 ?>

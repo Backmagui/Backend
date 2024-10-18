@@ -1,6 +1,19 @@
 <?php
 
-require_once ("login.php")
+require_once ("login.php");
+
+$chamados = array();
+
+$arquivo = fopen('registro.txt', 'r');
+
+while (!feof($arquivo)){
+  $registro = fgets($arquivo);
+  $chamados[] = $registro;
+}
+
+echo '<pre>';
+print_r($chamados);
+echo '</pre>';
 
 ?>
 
@@ -39,12 +52,23 @@ require_once ("login.php")
             </div>
             
             <div class="card-body">
+
+              <?php
+                foreach($chamados as $chamado){
+                $chamado_dados = explode('#', $chamado);
+                echo'<pre>';
+                print_r($chamado_dados);
+                echo '</pre>';
+
+              
+              ?>
               
               <div class="card mb-3 bg-light">
                 <div class="card-body">
-                  <h5 class="card-title">Título do chamado...</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Categoria</h6>
-                  <p class="card-text">Descrição do chamado...</p>
+                  <h5 class="card-title"><?php  $chamado_dados[0] ?></h5>
+                  <h6 class="card-subtitle mb-2 text-muted"><?php$chamado_dados[1]?></h6>
+                  <p class="card-text"><?php $chamado_dados[2
+                  ]?></p>
 
                 </div>
               </div>
