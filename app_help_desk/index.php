@@ -1,64 +1,48 @@
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>App Help Desk</title>
-    <link rel="stylesheet" type="text/css" href="bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Landing-Page</title>
+</head>
+<body>
+    <header>
 
-    </style>
-  </head>
-
-  <body>
-
-    <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">
-        <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        App Help Desk
-      </a>
-    </nav>
-
-    <div class="container">    
-      <div class="row">
-
-        <div class="card-login">
-          <div class="card">
-            <div class="card-header">
-              Login
-            </div>
-            <div class="card-body">
-              <form action="valida_login.php" method="post">
-                <div class="form-group">
-                  <input type="email" name="email" class="form-control" placeholder="E-mail" required >
-                </div>
-                <div class="form-group">
-                  <input type="password" name="senha" class="form-control" placeholder="Senha" required>
-                </div>
-
-                <?php
-                if (isset($_GET['login']) && $_GET['login'] == 'erro'){
-                ?>
-                <div class="text-danger">
-                  Usuário e/ou senha sem cadastro
-                </div>
-                <?php
-                }
-                ?>
-
-                <?php
-                if (isset($_GET['login']) && $_GET['login'] == 'erro2'){
-                ?>
-                <div class="text-danger">
-                  Faça o login primeiro
-                </div>
-                <?php
-                }
-                ?>
-
-                <button class="btn btn-lg btn-info btn-block" type="submit">Entrar</button>
-              </form>
-            </div>
-          </div>
+        <div id="comeco">
+            <center>
+                <h1 class="welcome">Seja Bem-vindo</h1>
+                <h3>Cadastre-se e receba nossas promoções</h3>
+            </center>
         </div>
-    </div>
-  </body>
+        <div>
+            <a href="entrar.php">
+                <button class="botao_login" type="submit" action="entrar.php">Login</button>
+            </a>
+        </div>
+    </header>
+    <main>
+            <div class="form">
+                <form>
+                    <center><img src="logo-2-net.png" width="150"></center>
+                    <div>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome" name="nome" required/>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Digite seu e-mail" name="email" required/>
+                    </div>
+                    <div>
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" placeholder="(15)9999-8888" name="telefone" required/>
+                    </div>
+                    <div class="cadastro">
+                        <input type="submit" value="Cadastrar">
+                    </div>
+                </form>
+            </div>
+            <div id="mulher"><img src="correndo.jpg" width="500"></div>
+    </main>
+</body>
 </html>

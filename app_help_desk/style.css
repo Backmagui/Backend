@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Matemasie&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Matemasie&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0px;
+}
+header{
+    background-color: #a06ee1;
+    /*background-color: #331940;*/
+    color: white;
+    display: flex;
+    /* gap: 570px; */
+    justify-content: center;
+    align-items: center;
+}
+h3{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.welcome{
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+main{
+    display: flex;
+    background-color: #222831;
+    /*background: linear-gradient(#a06ee1,#fff6f6);*/
+    height: 90vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form{
+    font-family: "Roboto", sans-serif;
+    font-weight: 50;
+    font-style: normal;
+    font-weight: 400;
+    width: 350px;
+    color: white;
+    margin-left: 200px;
+}
+
+.form div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+form input, form textarea{
+    outline: unset;
+    padding: 20px;
+    background-color: #eeeeee;
+    min-width: 300px;
+    border: 1.5px, solid #a06ee1;
+    border-radius: 10px;
+}
+
+#nome:focus{
+    
+    border: 4px solid #a06ee1;
+}
+#nome:valid{
+    color: green;
+}
+#nome:invalid{
+    color: red;
+}
+
+
+#email:focus{
+    border: 4px solid #a06ee1;
+
+}
+#email:valid{
+    color: green;
+}
+#email:invalid{
+    color: red;
+}
+
+
+#telefone:focus{
+    border: 4px solid #a06ee1;
+
+}
+#telefone:valid{
+    color: green;
+}
+#telefone:invalid{
+    color: red;
+}
+
+form input[type=submit]{
+    background-color: #a06ee1;
+    color: white;
+    cursor: pointer;
+}
+.cadastro:hover{
+    border: 5px solid #eeeeee;
+    border-radius: 15px;
+}
+.cadastro:active{
+    background-color: #430f58;
+}
+
+img{
+    margin-top: 10px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 50px;
+    margin-right: 20px;
+}
+
+.botao_login{
+    margin-left: 350px;
+    margin-top: -15px;
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+}
+
+.botao_login:hover{
+    border: 2px solid  #eeeeee;
+    background-color: #430f58;
+    color: #eeeeee;
+}

@@ -12,7 +12,7 @@ $texto = $titulo. '#' .$categoria. '#' .$textarea.PHP_EOL;
 
 header('location: consultar_chamado.php');
 
-$arquivo = fopen('registro.txt', 'a');
+$arquivo = fopen('../../app_help_desk/registro.txt', 'a');
 
 fwrite($arquivo, $texto);
 
